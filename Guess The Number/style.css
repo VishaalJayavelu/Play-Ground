@@ -1,0 +1,47 @@
+body{
+     background-color: rgb(255, 255, 255);
+     text-align:center;
+     font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container{
+     box-sizing:border-box;
+     border-radius: 10px;
+     border: 1px solid rgb(155, 155, 155);
+     padding:  5px 5px 5px 5px;
+     position: absolute;
+     top: 25vh;
+     left: 35vw;
+     right: 35vw;
+     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+     background-color: rgba(155, 155, 155, 0.363);
+     width: fit-content;
+}
+
+button,input{
+     background-color: white;
+     border: 1px solid black !important;
+     border-radius: 5px;
+     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+     color: Black;
+     font-weight: bold;
+     padding: 5px;
+     width: 125px;
+     margin-right: 25px;
+     margin-left: 25px;
+     margin-bottom: 25px;
+     text-align: center;
+     font-size: 14px;
+     font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+label,p{
+     font-weight: bold;
+     font-size: 20px;
+}
+.GuessNumber{
+     width: 250px;
+}
+
+button:hover,input:hover{
+     background-color: rgb(235, 234, 234);
+}
