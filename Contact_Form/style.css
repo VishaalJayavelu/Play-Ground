@@ -6,6 +6,7 @@
 	--pink: #EC4899;
 	--purple: #8B5CF6;
 	--light: #EEE;
+     --whitesmoke: #b6b6b6a4;
 }
 
 * {
@@ -16,15 +17,13 @@
 }
 
 body {
-	display: flex;
-	flex-direction: column;
 	min-height: 100vh;
 	background-color: var(--dark);
 }
 
 header {
 	padding: 2rem 1rem;
-	max-width: 800px;
+	max-width: 1000px;
 	width: 100%;
 	margin: 0 auto;
 }
@@ -32,13 +31,10 @@ header {
 header h2{ 
 	font-size: 2.5rem;
 	font-weight: 300;
-	color: var(--grey);
-	margin-bottom: 1rem;
+	color: var(--light);
+	margin-bottom: 2rem;
 }
 
-#add-task {
-	display: flex;;
-}
 
 input, button {
 	appearance: none;
@@ -47,17 +43,25 @@ input, button {
 	background: none;
 }
 
-#task-text {
-	flex: 1 1 0%;
+label{
+	font-size: 1.25rem;
+	font-weight: 300;
+	color: var(--whitesmoke);
+     margin-bottom: 2rem;
+     margin-right: 1rem;
+}
+
+.details{
 	background-color: var(--darker);
 	padding: 1rem;
 	border-radius: 1rem;
 	margin-right: 1rem;
 	color: var(--light);
 	font-size: 1.25rem;
+	margin-bottom: 1rem;
 }
 
-#task-text::placeholder {
+.details::placeholder{
 	color: var(--grey);
 }
 
@@ -67,9 +71,12 @@ input, button {
 	font-weight: 700;
 	background-image: linear-gradient(to right, var(--pink), var(--purple));
 	-webkit-background-clip: text;
+     background-clip: text;
 	-webkit-text-fill-color: transparent;
 	cursor: pointer;
 	transition: 0.4s;
+	margin-top: 2rem;
+	margin-left: 45%;
 }
 
 #Submit:hover {
@@ -80,24 +87,30 @@ input, button {
 	opacity: 0.6;
 }
 
+input:required:invalid,input:focus:invalid {
+     -moz-box-shadow: none;
+     box-shadow: none;
+     border-color: var(--red);
+}
+
 main {
-	max-width: 800px;
+	max-width: 1000px;
 	width: 100%;
 	margin: 0 auto;
 }
 
-.task-list {
+.contacts {
 	padding: 1rem;
 }
 
-.task-list h3 {
+.contacts h3 {
 	font-size: 1.5rem;
 	font-weight: 300;
-	color: var(--grey);
+	color: var(--light);
 	margin-bottom: 1rem;
 }
 
-#tasks .taskwarp {
+#contact-list .taskwarp{
 	justify-content: space-between;
 	background-color: var(--darkest);
 	padding: 1rem;
@@ -105,19 +118,15 @@ main {
 	margin-bottom: 1rem;
 }
 
-.taskwarp .text {
-	flex: 1 1 0%;
-}
 
-.taskwarp .text {
+.taskwarp .text-input {
 	color: var(--light);
 	font-size: 1.125rem;
-	width: 100%;
-	display: block;
 	transition: 0.4s;
+     margin-bottom: 1rem;
 }
 
-.taskwarp .text:not(:read-only) {
+.taskwarp .text-input:not(:read-only){
 	color: var(--pink);
 }
 
@@ -146,6 +155,7 @@ main {
 .taskwarp .actions .edit {
 	background-image: linear-gradient(to right, var(--pink), var(--purple));
 	-webkit-background-clip: text;
+     background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
 
