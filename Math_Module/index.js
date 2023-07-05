@@ -1,10 +1,19 @@
-function hello(){
-     return 'hello';
-}
+const {sum,sub,mul,div,mod,pow,fact,sqr,cub} = require('./maths');
 
-console.log(hello());
+console.log(sum(5,10));
+console.log(sub(5,10));
 
-const root=document.getElementById('root');
-root.innerHTML=hello();
+console.log(mul(5,10));
+console.log(mul(5,2));
+console.log(mul(5,3));
 
-alert(hello());
+console.log(pow(5,10));
+console.log(sqr(5));
+console.log(cub(5));
+
+console.log(fact(5));
+
+console.log(div(5,10));
+console.log(mod(5,10));
+
+

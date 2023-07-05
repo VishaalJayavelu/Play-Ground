@@ -15,5 +15,8 @@
     "Js"
   ],
   "author": "Vishaal J <vishaal.j.trs@gmail.com>",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "math": "^0.0.3"
+  }
 }
