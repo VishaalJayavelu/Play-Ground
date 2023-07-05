@@ -1,0 +1,53 @@
+:root{
+     --light: #ffffff;
+     --rose: #ff4c4c;
+     --grey: #727272;
+     --dark: #000000;
+     --transdrak: #00000093;
+}
+
+body{
+     background-color: var(--light);
+     color: var(--dark);
+     padding: 1rem;
+     margin-left: auto;
+     margin-right: auto;
+}
+
+.container{
+     background-color: var(--light);
+     color: var(--light);
+     height: 30rem;
+     width: 100%;
+     position: block;
+     border-radius: 2rem;
+}
+
+.slides{
+     height: 30rem;
+     margin-left: auto;
+     margin-right: auto;
+     border-radius: 2rem;
+     display: none;
+}
+.circles{
+     position: absolute;
+     top: 29rem;
+     left: 48%;
+}
+.btn{
+     border-radius: 100%;
+     border: #000000 1px solid;
+     height: 1rem;
+     width: 1rem;
+     right: 10%;
+     cursor: pointer;
+     display: inline-block;
+     transition: 0.4s;
+}
+.active, .btn:hover{
+     opacity: 0.5;
+     background-color: var(--transdrak);
+}
+
+   

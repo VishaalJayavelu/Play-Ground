@@ -1,0 +1,157 @@
+:root {
+	--dark: #374151;
+	--darker: #1F2937;
+	--darkest: #000000;
+	--grey: #6B7280;
+	--pink: #ff0080;
+	--purple: #9c09ff;
+	--light: #ffffff;
+     --pinktopurple:linear-gradient(to right, var(--pink), var(--purple));
+}
+
+* {
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Fira sans", sans-serif;
+	color: var(--light);
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	background-color: var(--dark);
+}
+
+header {
+	padding: 2rem 1rem;
+	max-width: 800px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+header h2{ 
+	font-size: 2.5rem;
+	font-weight: 300;
+	color: var(--grey);
+	margin-bottom: 1rem;
+}
+
+.add-number {
+	display: block;
+	margin-bottom: 1rem;
+}
+
+input, button {
+	appearance: none;
+	border: none;
+	outline: none;
+	background: none;
+}
+
+.task-text {
+	background-color: var(--darker);
+	padding: 1rem;
+	border-radius: 1rem;
+	margin-right: 1rem;
+	color: var(--light);
+	font-size: 1.25rem;
+	margin-bottom: 1rem;
+}
+
+.task-text::placeholder {
+	color: var(--grey);
+}
+
+.button {
+	color: var(--pink);
+	font-size: 3rem;
+	font-weight: 700;
+	background-image: var(--pinktopurple);
+	-webkit-background-clip: text;
+     background-clip: text;
+	-webkit-text-fill-color: transparent;
+	cursor: pointer;
+	transition: 0.4s;
+}
+
+.button:hover {
+	opacity: 0.8;
+}
+
+.bbutton:active {
+	opacity: 0.6;
+}
+
+main {
+	max-width: 800px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.task-list {
+	padding: 1rem;
+}
+
+.task-list h3 {
+	font-size: 1.5rem;
+	font-weight: 300;
+	color: var(--darkest);
+	margin-bottom: 1rem;
+}
+
+#tasks .taskwarp {
+	justify-content: space-between;
+	background-color: var(--darkest);
+	padding: 1rem;
+	border-radius: 1rem;
+	margin-bottom: 1rem;
+}
+
+.taskwarp .text {
+	flex: 1 1 0%;
+}
+
+.taskwarp .text {
+	color: var(--light);
+	font-size: 1.125rem;
+	width: 100%;
+	display: block;
+	transition: 0.4s;
+}
+
+.taskwarp .text:not(:read-only) {
+	color: var(--pink);
+}
+
+.taskwarp .actions {
+	display: flex;
+	margin: 0 -0.5rem;
+}
+
+.taskwarp .actions button {
+	cursor: pointer;
+	margin: 0 0.5rem;
+	font-size: 1.125rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	transition: 0.4s;
+}
+
+.taskwarp .actions button:hover {
+	opacity: 0.8;
+}
+
+.taskwarp .actions button:active {
+	opacity: 0.6;
+}
+
+.taskwarp .actions .edit {
+	background-image: var(--pinktopurple);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.taskwarp .actions .delete {
+	color: crimson;
+}
