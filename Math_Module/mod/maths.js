@@ -1,10 +1,10 @@
-function sum(a,b){
+export function sum(a,b){
      return a+b;
 }
-function sub(a,b){
+export function sub(a,b){
      return a-b;
 }
-function mul(a,b){
+export function mul(a,b){
      if(b==2){
           return sqr(a);
      }
@@ -13,13 +13,13 @@ function mul(a,b){
      }
      return a*b;
 }
-function div(a,b){
+export function div(a,b){
      return a/b;
 }
-function mod(a,b){
+export function mod(a,b){
      return a%b;
 }
-function pow(a,b){
+export function pow(a,b){
      if(b==0){
          return 1;
      }
@@ -29,7 +29,7 @@ function pow(a,b){
      }
      return res;
 }
-function fact(a){
+export function fact(a){
      if(a==0||a==1){
          return 1;
      }
@@ -41,12 +41,10 @@ function fact(a){
      }
      return res;
 }
-function sqr(a){
+export function sqr(a){
      return a*a;
 }
-function cub(a){
+export function cub(a){
      return a*a*a;
 }
 
-
-export default{sum,sub,mul,div,mod,pow,fact,sqr,cub}
