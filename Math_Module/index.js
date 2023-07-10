@@ -1,4 +1,4 @@
-const {sum,sub,mul,div,mod,pow,fact,sqr,cub} = require('./maths');
+import { sum, sub, mul, div, mod, pow, fact, sqr, cub } from './mod/maths.js';
 
 console.log(sum(5,10));
 console.log(sub(5,10));

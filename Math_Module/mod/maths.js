@@ -1,10 +1,10 @@
-const sum=(a,b)=>{
+function sum(a,b){
      return a+b;
 }
-const sub=(a,b)=>{
+function sub(a,b){
      return a-b;
 }
-const mul=(a,b)=>{
+function mul(a,b){
      if(b==2){
           return sqr(a);
      }
@@ -13,13 +13,13 @@ const mul=(a,b)=>{
      }
      return a*b;
 }
-const div=(a,b)=>{
+function div(a,b){
      return a/b;
 }
-const mod=(a,b)=>{
+function mod(a,b){
      return a%b;
 }
-const pow=(a,b)=>{
+function pow(a,b){
      if(b==0){
          return 1;
      }
@@ -29,7 +29,7 @@ const pow=(a,b)=>{
      }
      return res;
 }
-const fact=(a)=>{
+function fact(a){
      if(a==0||a==1){
          return 1;
      }
@@ -41,12 +41,12 @@ const fact=(a)=>{
      }
      return res;
 }
-const sqr=(a)=>{
+function sqr(a){
      return a*a;
 }
-const cub=(a)=>{
+function cub(a){
      return a*a*a;
 }
 
 
-module.exports ={sum,sub,mul,div,mod,pow,fact,sqr,cub}
+export default{sum,sub,mul,div,mod,pow,fact,sqr,cub}
