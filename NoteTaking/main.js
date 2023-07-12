@@ -2,6 +2,9 @@ window.onload = function() {
      const addnotes=document.querySelector("#add-notes");
      const notestext=document.querySelector("#notes-text");
      const noteslist=document.querySelector("#notes");
+     
+     notestext.focus();
+     
      addnotes.addEventListener("submit",(e)=>{
           e.preventDefault();
           
@@ -35,10 +38,10 @@ window.onload = function() {
           noteswarp.appendChild(text);
           noteswarp.appendChild(action);
           noteslist.appendChild(noteswarp);
-          noteslist.appendChild(document.createElement('br'));
           
           notestext.value = "";
-    
+          notestext.focus();
+          
           deletebnt.addEventListener("click",(e)=>{
                noteslist.removeChild(noteswarp);
           });
@@ -46,14 +49,16 @@ window.onload = function() {
           editbnt.addEventListener("click",(e)=>{
                if (editbnt.innerText.toLowerCase()=='edit') {
                     editbnt.innerText="Save";
+                    editbnt.classList.add("save");
                     text.removeAttribute("readonly");
                     text.focus();
+                    editbnt.style.colour='white';
                } else {
                     editbnt.innerText="Edit";
+                    editbnt.classList.remove("save");
                     text.setAttribute("readonly", "readonly");
                }
            });
-
      });
 
 }

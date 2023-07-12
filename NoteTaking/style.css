@@ -16,7 +16,12 @@
      --blue2:#006eff;
      --blue3:#00aeff;
      --blue4:#00f7ff;
+     --pink1:#ff0095;
+     --pink2:#ff00ea;
+     --pink3:#ff00ff;
+     --pink4:#a200ff;
      --bluegradient: linear-gradient(to right, var(--blue1), var(--blue2), var(--blue3), var(--blue4), var(--blue4));
+     --pinkgradient: linear-gradient(to right, var(--pink1), var(--pink2), var(--pink3), var(--pink4), var(--pink4));
      --sunsetgradient: linear-gradient( to right, var(--sunset1), var(--sunset2), var(--sunset3), var(--sunset4));
      --darkgradient: linear-gradient(to bottom, var(--col1), var(--col1), var(--col1), var(--col2), var(--col2), var(--col3), var(--col4));
      
@@ -28,111 +33,113 @@ body{
      background-repeat: no-repeat;
      background-size: cover;
      background-attachment: fixed;
+     padding: 1rem;
      color: var(--grey);
 }
 
-h2{
-     font-size: 3rem;
-     margin-top: 50px;
+.head{
+     float: left;
+     padding: 1rem;
+     width:30%;
 }
 
-h3{
-     font-size: 2.5rem;
-     margin-top: 50px;
+.section{
+     float: left;
+     padding: 1rem;
+     width:65%;
+     min-height: 12rem;
+     border-left: 1px solid var(--grey);
 }
+
+h2{
+     padding: 1rem;
+     border-bottom:  1px solid var(--grey);
+}
+
 form{
-     float: bottom;
-     justify-content:center;
-     display:flex;
+     display: flex;
 }
 #notes-text{
      overflow: hidden;
-}
-#notes-text,.text{
      background-color: var(--grey);
+     width: 100%;
+     height: 100%;
      font-size: 1rem;
-     line-height: 1.5;
-     resize: horizontal;
      padding: 1rem;
-     border: 0 solid transparent;
-     margin:1rem;
-     width: 30rem;
-     border-radius: 10px;
-     display: inline;
+     margin-right: 1rem;
+     border: 0;
+     border-radius: 20px;
 }
 
-.text::-webkit-scrollbar {
-     display: none;
- }
- 
-
- .text {
-     min-height: -moz-fit-content;
-     min-height: fit-content;
-     max-height: max-content;
-   -ms-overflow-style: none;  /* IE and Edge */
-   scrollbar-width: none;  /* Firefox */
- }
 .Submit{
+     height: 3rem;
      background-color: var(--grey);
-     font-size: x-large;
-     padding: 1rem;
-     border: 0 solid transparent;
-     margin:1rem;
-     height: fit-content;
-     border-radius: 10px;
-}
-.notes{
-     display: flex;
-}
-.noteswarp{
-     display: inline-flex;
-     width: 40rem;
-     padding: 1rem;
-     background-color: var(--darklight);
-     margin-bottom: 1rem;
-     border-radius: 10px;
-}
-.actions button{
-     float:right;
-     display: flex;
-     padding: 1rem;
-     cursor: pointer;
-	font-size: 1.25rem;
-	font-weight: 700;
-     border: 0 solid transparent;
-	text-transform: uppercase;
-	transition: 0.4s;
-}
-
-.noteswarp .text:not(:read-only) {
-	color: var(--sunset4);
-     background-color: #00000000;
-     border: 0 solid transparent;
-}
-.actions .delete{
-     background-image: var(--sunsetgradient);
-     -webkit-background-clip: text;
-     background-clip: text;
-	-webkit-text-fill-color: transparent;
-}
-.edit{
+     font-size: 1.5rem;
+     margin-top: 1rem;
+     border: 0;
      background-image: var(--bluegradient);
      -webkit-background-clip: text;
      background-clip: text;
 	-webkit-text-fill-color: transparent;
+	cursor: pointer;	 
+}
+.notes{
+     display: flex;
+     float: left;
+     padding: 1rem;
+}
+.noteswarp{
+     display: flex;
+     float: left;
+     margin-left: 1rem;
+     margin-bottom: 1rem;
 }
 
-.textarea {
-     display: block;
-     width: 100%;
+.text{
      overflow: hidden;
-     resize: both;
-     min-height: 40px;
-     line-height: 20px;
-   }
-   
-   .textarea[contenteditable]:empty::before {
-     content: "Placeholder still possible";
-     color: gray;
-   }
+     background-color: var(--grey);
+     width: 100%;
+     height: 100%;
+     font-size: 1rem;
+     padding: 1rem;
+     margin-right: 0.25rem;
+     border: 0;
+     border-radius: 20px;
+     display: flex;
+     float: left;
+}
+
+.action{
+     display: flex;
+     float: right;
+}
+
+.edit{
+     background-image: var(--pinkgradient);
+}
+
+.save{
+     background-image: var(--bluegradient);
+}
+
+.text:not(:read-only),.text:focus{
+     background-color: var(--trans);
+     color: var(--sunset3);
+     border: 1px solid var(--pink4);
+}
+
+.delete{
+     background-image: var(--sunsetgradient);
+}
+
+.edit,.delete{
+     border: 0;
+     font-size: 0.90rem;
+     display: flex;
+     padding: 0.25rem;
+     margin-bottom: 0.5rem;
+     -webkit-background-clip: text;
+     background-clip: text;
+	-webkit-text-fill-color: transparent;
+	cursor: pointer;
+}

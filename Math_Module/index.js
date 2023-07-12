@@ -15,5 +15,3 @@ console.log(fact(5));
 
 console.log(div(5,10));
 console.log(mod(5,10));
-
-
