@@ -125,7 +125,6 @@ form{
 .text:not(:read-only),.text:focus{
      background-color: var(--trans);
      color: var(--sunset3);
-     border: 1px solid var(--pink4);
 }
 
 .delete{
