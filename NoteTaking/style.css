@@ -1,0 +1,138 @@
+:root{
+     --light: #ffffff;
+     --grey: #ffffff96;
+     --dark: #000000;
+     --darklight: #00000041;
+     --col1:#404258;
+     --col2:#474E68;
+     --col3:#50577A;
+     --col4:#6B728E;
+     --trans: #00000000;
+     --sunset1:#8C0000;
+     --sunset2:#BD2000;
+     --sunset3:#FA1E0E;
+     --sunset4:#FFBE0F;
+     --blue1:#003cff;
+     --blue2:#006eff;
+     --blue3:#00aeff;
+     --blue4:#00f7ff;
+     --bluegradient: linear-gradient(to right, var(--blue1), var(--blue2), var(--blue3), var(--blue4), var(--blue4));
+     --sunsetgradient: linear-gradient( to right, var(--sunset1), var(--sunset2), var(--sunset3), var(--sunset4));
+     --darkgradient: linear-gradient(to bottom, var(--col1), var(--col1), var(--col1), var(--col2), var(--col2), var(--col3), var(--col4));
+     
+}
+
+body{
+     font-family: 'Roboto', sans-serif;
+     background-image: var(--darkgradient);  
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-attachment: fixed;
+     color: var(--grey);
+}
+
+h2{
+     font-size: 3rem;
+     margin-top: 50px;
+}
+
+h3{
+     font-size: 2.5rem;
+     margin-top: 50px;
+}
+form{
+     float: bottom;
+     justify-content:center;
+     display:flex;
+}
+#notes-text{
+     overflow: hidden;
+}
+#notes-text,.text{
+     background-color: var(--grey);
+     font-size: 1rem;
+     line-height: 1.5;
+     resize: horizontal;
+     padding: 1rem;
+     border: 0 solid transparent;
+     margin:1rem;
+     width: 30rem;
+     border-radius: 10px;
+     display: inline;
+}
+
+.text::-webkit-scrollbar {
+     display: none;
+ }
+ 
+
+ .text {
+     min-height: -moz-fit-content;
+     min-height: fit-content;
+     max-height: max-content;
+   -ms-overflow-style: none;  /* IE and Edge */
+   scrollbar-width: none;  /* Firefox */
+ }
+.Submit{
+     background-color: var(--grey);
+     font-size: x-large;
+     padding: 1rem;
+     border: 0 solid transparent;
+     margin:1rem;
+     height: fit-content;
+     border-radius: 10px;
+}
+.notes{
+     display: flex;
+}
+.noteswarp{
+     display: inline-flex;
+     width: 40rem;
+     padding: 1rem;
+     background-color: var(--darklight);
+     margin-bottom: 1rem;
+     border-radius: 10px;
+}
+.actions button{
+     float:right;
+     display: flex;
+     padding: 1rem;
+     cursor: pointer;
+	font-size: 1.25rem;
+	font-weight: 700;
+     border: 0 solid transparent;
+	text-transform: uppercase;
+	transition: 0.4s;
+}
+
+.noteswarp .text:not(:read-only) {
+	color: var(--sunset4);
+     background-color: #00000000;
+     border: 0 solid transparent;
+}
+.actions .delete{
+     background-image: var(--sunsetgradient);
+     -webkit-background-clip: text;
+     background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+.edit{
+     background-image: var(--bluegradient);
+     -webkit-background-clip: text;
+     background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.textarea {
+     display: block;
+     width: 100%;
+     overflow: hidden;
+     resize: both;
+     min-height: 40px;
+     line-height: 20px;
+   }
+   
+   .textarea[contenteditable]:empty::before {
+     content: "Placeholder still possible";
+     color: gray;
+   }

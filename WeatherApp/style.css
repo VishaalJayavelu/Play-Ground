@@ -1,5 +1,7 @@
 :root{
      --light: #ffffff;
+     --dimlight:#ffffffc2;
+     --dim:#ffffff8e;
      --dark: #000000;
      --grey: #464646;
      --space1:#03001C;
@@ -7,7 +9,7 @@
      --space3:#5B8FB9;
      --space4:#B6EADA;
      --trans:#03001c00;
-     --spacegradient: linear-gradient(to bottom, var(--space1), var(--space1), var(--space1), var(--space2), var(--space2), var(--space3), var(--space4));
+     --spacegradient: linear-gradient(to bottom, var(--space1), var(--space1), var(--space2), var(--space2), var(--space2), var(--space3), var(--space4));
 }
 
 body{
@@ -18,7 +20,7 @@ body{
      background-attachment: fixed;
      display: flex;
      justify-content: center;
-     color: white;
+     color: rgb(0, 0, 0);
 }
 .container{
      margin-top: 200px;
@@ -39,27 +41,39 @@ button{
 
 #search-city{
      width: 80%;
-     font-size: 1rem;
+     font-size: 1.5rem;
      padding: 2rem;
      height: 3rem;
      border-radius: 50px;
+     background-color: var(--dimlight);
 }
 
 .content{
-     padding: 3rem;
-     text-align: center;
-     line-height: 3rem;
+     margin-top: 3rem;
+     padding: 2rem;
+     width: max-content;
      border-radius: 50px;
 }
 
 #name{
-     font-weight: bold;
+     font-weight: bolder;
      font-size: 3rem;
+}
+
+#image{
+     top: auto;
+     height: 100px;
+     width: auto;
+}
+
+#min-temp,#max-temp{
+     font-weight: bolder;
+     font-size: 0.5rem;
 }
 
 #temp{
      font-weight: bold;
-     font-size: 2rem;
+     font-size: 5rem;
 }
 
 #climate{
@@ -67,7 +81,7 @@ button{
      font-size: 2rem;
 }
 
-#timezone{
+#description{
      font-weight: bold;
-     font-size: 2rem;
+     font-size: 1rem;
 }
