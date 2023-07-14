@@ -1,15 +1,19 @@
 
 const add = document.querySelector('#ADD');
 const notes=[];
+let id=0;
 
-const addnotes = (note) => {
+const addnotes = (id,note) => {
+     console.log(id);
+     console.log(notes);
      notes.push({
+          id,
           note,
      });
    
      localStorage.setItem("notes", JSON.stringify(notes));
    
-     return { note };
+     return { id,note };
    };
    
 add.addEventListener('click', Add);
@@ -50,12 +54,11 @@ function Add() {
 
 function save(edit,textarea){
      if(edit.textContent=="Save the notes"){
-          addnotes(
-               textarea.value,
-               );
           textarea.setAttribute("readonly", "readonly");
+          const text=textarea.innerText.value;
+          console.log(text);
           edit.innerText="Edit the notes";
-          edit.classList.replace('actions','edit');
+          edit.classList.replace('actions','edit');   
      }else{     
           textarea.focus();
           textarea.removeAttribute("readonly", "readonly");

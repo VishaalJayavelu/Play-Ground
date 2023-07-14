@@ -15,8 +15,6 @@ body{
      background-repeat: no-repeat;
      background-size: cover;
      background-attachment: fixed;
-     float: left;
-     display: inline;
      font-size: 0.75rem;
      padding: 0.75rem;
      color: var(--dark);
@@ -25,16 +23,13 @@ h1{
      border-bottom: 2px solid var(--dark);
      width: 100%;
      padding: 0.75rem;
-     float: left;
-     display: inline;
 }
 textarea{
      border: 0 solid transparent;
      border-radius: 10px !important;
      height: 13rem;
      width: 13rem;
-     float: left;
-     display: inline;
+     display: inline-flex;
      padding: 1rem;
      overflow: hidden; 
      font-size: 0.75rem;
@@ -91,12 +86,12 @@ textarea:focus + button + button,textarea:hover + button + button{
 }
 .show{
      float: left;
-     display: inline;
+     display: block;
 }
 .content{
      display: inline-block; 
      position: relative;
-     margin: 1rem;
+     margin: 0.87rem;
 }
 .edit,.X{
      border: 0 solid transparent;
@@ -123,13 +118,14 @@ textarea:focus + button + button,textarea:hover + button + button{
 }
 .ADD{ 
      float: left;
-     display: inline;
+     display: block;
+     position: inherit !important;
      border-radius: 10px !important;
      height: 15rem;
      width: 15rem;
      font-size: 10rem;
      border: 0 solid transparent;
-     margin: 1rem;
+     margin: 0.87rem;
      -webkit-background-clip: text;
      background-clip: text;
 	-webkit-text-fill-color: transparent;
