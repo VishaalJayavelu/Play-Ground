@@ -1,0 +1,172 @@
+:root{
+     --light: #ffffff;
+     --lightlight: #ffffff49;
+     --dark: #000000;
+     --trans: background-image;
+     --red: #ff000070;
+     --lightgrey: rgba(196, 196, 196, 0.219);
+     --grad0:linear-gradient(to right, var(--lightlight),var(--lightlight));
+     --grad1:linear-gradient(360deg, #a5089b, #832352);
+     --grad2:linear-gradient(96deg, #3014d2, #3dc016);
+     --grad3:linear-gradient(96deg, #1a377a, #2d1643);
+}
+body{
+     background-image: var(--grad3);
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-attachment: fixed;
+     float: left;
+     display: inline;
+     font-size: 0.75rem;
+     padding: 0.75rem;
+     color: var(--dark);
+}
+h1{
+     border-bottom: 2px solid var(--dark);
+     width: 100%;
+     padding: 0.75rem;
+     float: left;
+     display: inline;
+}
+textarea{
+     border: 0 solid transparent;
+     border-radius: 10px !important;
+     height: 13rem;
+     width: 13rem;
+     float: left;
+     display: inline;
+     padding: 1rem;
+     overflow: hidden; 
+     font-size: 0.75rem;
+     font-weight: 200;
+     line-height: 1rem;
+     letter-spacing: 0.05rem;
+     background-color: var(--lightgrey);
+}
+
+textarea:focus, textarea:hover{
+     background-color: var(--trans);
+     color: var(--light);
+     border: 2px solid var(--light);
+}
+textarea:hover:placeholder{
+     color:var(--light);
+
+}
+textarea:focus + button, textarea:hover + button{
+     -webkit-text-fill-color: var(--light);
+}
+textarea:focus + button + button,textarea:hover + button + button{
+     -webkit-text-fill-color: var(--light);
+}
+.actions{
+     border: 0 solid transparent;
+     position: absolute;
+	cursor: pointer;
+     -webkit-background-clip: text;
+     background-clip: text;
+	-webkit-text-fill-color: transparent;
+	cursor: pointer;
+     background-image: var(--light);
+     border-radius: 0;
+     height:1.5rem;
+     font-weight:900; 
+     right: 0px; 
+     bottom: 0px;
+}
+.actions:hover{
+     font-size:x-large;
+     top:3%;
+     left: 5%;
+     right: 5%;
+     text-decoration:solid;
+     overflow: visible;
+     height: auto;
+     -webkit-background-clip: text;
+     background-clip: text;
+	-webkit-text-fill-color: transparent;
+	cursor: pointer;
+     background-image: var(--grad1);
+     border-radius: 0;
+}
+.show{
+     float: left;
+     display: inline;
+}
+.content{
+     display: inline-block; 
+     position: relative;
+     margin: 1rem;
+}
+.edit,.X{
+     border: 0 solid transparent;
+     position: absolute;
+	cursor: pointer;
+     -webkit-background-clip: text;
+     background-clip: text;
+	-webkit-text-fill-color: transparent;
+	cursor: pointer;
+     background-image: var(--grad3);
+     height:auto !important;
+     font-weight:900;
+     float: right;
+     display: inline;
+}
+.edit{
+     right: 0px; 
+     bottom: 0px;
+}
+.X{
+     font-size: large;
+     right: 0.75px; 
+     top: 0px;
+}
+.ADD{ 
+     float: left;
+     display: inline;
+     border-radius: 10px !important;
+     height: 15rem;
+     width: 15rem;
+     font-size: 10rem;
+     border: 0 solid transparent;
+     margin: 1rem;
+     -webkit-background-clip: text;
+     background-clip: text;
+	-webkit-text-fill-color: transparent;
+     background-image: var(--grad0);
+     opacity: 0.3;
+}
+.ADD:hover{
+     -webkit-background-clip: border-box;
+     background-clip: border-box;
+	-webkit-text-fill-color: var(--grad2);
+	cursor: pointer;
+     background-image: var(--trans);
+}
+.X:hover,textarea:focus + .X:hover{
+     font-size: 10rem;
+     bottom:3%;
+     left: 5%;
+     right: 5%;
+     text-decoration:solid;
+     overflow: visible;
+     height: auto;
+	-webkit-text-fill-color: var(--red);
+	cursor: pointer;
+     border-radius: 0 4px 0 0;
+}
+.edit:hover{
+     font-size:x-large;
+     top:3%;
+     left: 5%;
+     right: 5%;
+     text-decoration:solid;
+     overflow: visible;
+     height: auto;
+     -webkit-background-clip: text;
+     background-clip: text;
+	-webkit-text-fill-color: transparent;
+	cursor: pointer;
+     background-image: var(--grad1);
+     border-radius: 0;
+}
