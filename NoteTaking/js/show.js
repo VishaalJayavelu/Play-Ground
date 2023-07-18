@@ -66,6 +66,8 @@ export default class Show{
           notesEdit.addEventListener("click",(e)=>{
                document.querySelector('#notes-title').value = addTitle;
                document.querySelector('#notes-body').value = addBody;
+               document.querySelector('#notes-title').focus();
+               document.querySelector('#Submit').value = "SAVE";
                Notes.del(addTitle);
           });
      }

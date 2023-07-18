@@ -23,7 +23,9 @@ export default class Notes{
                alert("please enter the notes to store");
                document.querySelector('#notes-body').focus();
           }else{
-               notesToSave.updated= new Date().toISOString();
+               let date= new Date().toDateString();
+               let time=new Date().toLocaleTimeString();
+               notesToSave.updated = date+" "+time;
                notes.push(notesToSave);
                localStorage.setItem("NotesList", JSON.stringify(notes));
                location.reload();
@@ -36,8 +38,9 @@ export default class Notes{
           if(exist){
                exist.title = Ntitle;
                exist.body = Nbody;
-               exist.updated = new Date().toISOString();
-
+               let date= new Date().toDateString();
+               let time= new Date().toLocaleTimeString();
+               exist.updated = date+" "+time;
                localStorage.setItem("NotesList", JSON.stringify(notes));
           }
 
