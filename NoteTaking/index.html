@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,21 +8,37 @@
 	<title>Notes</title>
 </head>
 <body>
-     <section class="head">
+     <section class="split left">
           <h2>Add Notes</h2>
           <form id="add-notes">
-               <textarea name="notes-text" id="notes-text"></textarea>
+               <label for="title" id="title">Enter the title here:</label><br>
+               <input type="text" name="title" id="notes-title"><br><br>
+               <label for="body" id="body">Enter the notes here:</label><br>
+               <textarea name="body" id="notes-body"></textarea><br><br>
                <input type="submit" class="Submit" id="Submit" value="Submit">
           </form>
      </section>
-     <section class="section">
-          <div class="div">
+     <section class="split right">
+          <div class="content">
                <h2>Notes</h2>
-               <div id="notes">
+               <div id="notes-list">
+                    <!--<div class="notes">
+                         <div class="notes-content">     
+                              <label class="notes-title-show" for="notes-body-show">Notes title</label>
+                              <textarea class="notes-body-show" id="notes-body-show">Imagine standing in front of a robot, gazing into its wide, plastic eyes, and falling in love. Your heart revs up, and you hope this Other—this humanoid machine—turns your way again, tilts its head in interest, likes you back.
+
+                                   It happened one summer to Sherry Turkle, at a lab at the Massachusetts Institute of Technology, where she is a professor studying the impact of technology on society. She met a metallic robot named Cog—made to resemble a human, with moving arms and a head—which was programmed to turn toward whoever was speaking, suggesting that it understood what was being said. To Turkle’s surprise, she found that she deeply wanted Cog to interact with her rather than with a colleague who was there that day. She realized this human-looking machine was tapping into a deep human desire to see it as alive—as good a companion as any human. She describes it almost like a schoolgirl crush.</textarea>
+                              <div class="notes-time-show">thursday, 10-nov-2023, 12:42 P.M.</div>
+                         </div>
+                         <div class="notes-actions">
+                              <button type="button" class="notes-edit">Edit</button>
+                              <button type="button" class="notes-del">Delete</button>
+                         </div>
+                    </div>-->    
                </div>
           </div>
      </section>
-     <script src="./main.js"></script>
+     <script src="./js/main.js" type="module"></script>
 </body>
 
 </html>
