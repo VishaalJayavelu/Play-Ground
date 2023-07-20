@@ -29,7 +29,7 @@ export default class Notes{
                notes.push(notesToSave);
                localStorage.setItem("NotesList", JSON.stringify(notes));
                location.reload();
-          }     
+          }   
      }
      static edit(title,body,Ntitle,Nbody){
           const notes = Notes.getall();
