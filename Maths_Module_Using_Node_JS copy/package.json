@@ -1,0 +1,19 @@
+{
+  "name": "notes_taking_using_node_js",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/VishaalJayavelu/Play-Ground/S"
+  },
+  "keywords": [],
+  "author": "Vishaal.J <vishaal.j.trs@gmail.com>",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}
