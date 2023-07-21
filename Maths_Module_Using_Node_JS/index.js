@@ -1,8 +1,3 @@
-/*const http = require('http'); 
-const fs = require('fs');
-const fspro = require('fs').promises;
-const path = require('path');
-*/
 const readline = require('readline-sync');
 const mod= require('maths_module');
 const { setTimeout } = require('timers');
@@ -83,12 +78,4 @@ const sel=async(opp)=>{
 }
 
 main();
-/*fs.readFile('./index.html',function(err, html){
-     if (err) throw err;
-     http.createServer(function (req, res) { 
-          res.writeHead(200, {'Content-type': 'text/html'}); 
-          res.write(html);         
-          res.end();
-      }).listen(8080);
-});
-*/
+
