@@ -1,20 +1,19 @@
 {
-  "name": "planet",
+  "name": "weather_app",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
-     "start":"nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/VishaalJayavelu/Play-Ground/tree/main/Week-3/Planet"
+    "url": "https://github.com/VishaalJayavelu/Play-Ground/tree/main/Week-2/Weather_App"
   },
   "keywords": [],
-  "author": "",
+  "author": "Vishaal.J <vishaal.j.trs@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "csv-parse": "^5.4.0"
+    "moment-timezone": "^0.5.43"
   }
 }
