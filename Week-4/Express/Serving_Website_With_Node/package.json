@@ -1,0 +1,26 @@
+{
+  "name": "serving_website_with_node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+     "start":"nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VishaalJayavelu/Play-Ground/tree/main/Week-4/Express/Serving_Website_With_Node"
+  },
+  "author": "Vishaal.J <vishaal.j.trs@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VishaalJayavelu/Play-Ground/issues"
+  },
+  "homepage": "https://github.com/VishaalJayavelu/Play-Ground/tree/main#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

@@ -1,15 +1,15 @@
 {
-  "name": "post_request",
+  "name": "model_view_controller_in_express",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "scripts": {
-     "watch":"nodemon server.js",
+     "start":"nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/VishaalJayavelu/Play-Ground/tree/main/Week-4/Post_Request"
+    "url": "git+https://github.com/VishaalJayavelu/Play-Ground/tree/main/Week-4/Express/Model_View_Controller_In_Express"
   },
   "author": "Vishaal.J <vishaal.j.trs@gmail.com>",
   "license": "ISC",
