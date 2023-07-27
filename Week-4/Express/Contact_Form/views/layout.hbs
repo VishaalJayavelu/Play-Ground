@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>{{title}}</title>
+</head>
+<body><section class="split left">
+     <h1>Contact Form</h1>
+     <p>{{messages}}</p>
+     <form id="add-contacts" method="post" action="/form">
+          <label for="fname" id="fname">Enter the First Name here:</label>
+          <input type="text" name="fname" id="input-fname" placeholder="xxxxxx" required><br><br>
+          <label for="lname" id="lname">Enter the Last Name here:</label>
+          <input type="text" name="lname" id="input-lname" placeholder="yyyyyy"><br><br>
+          <label for="mobileno" id="mobileno">Enter the Mobile no here:</label>
+          <input type="number" name="mobileno" id="input-mobileno" placeholder="789456123" required><br><br>
+          <label for="email" id="email">Enter the Email ID here:</label>
+          <input type="email" name="email" id="input-email" placeholder="xxxxx@xxx.xx"><br><br>
+          <label for="reason" id="reason">Type your reason to contact us:</label><br><br>
+          <textarea name="reason" id="input-reason" style="height:5rem; width:25rem" placeholder="Regariding a new collab....."></textarea><br><br>
+          <input type="submit" class="Submit" id="Submit" value="Submit">
+     </form>
+</section>
+<section class="split right">
+     <div class="Contacts">
+          <h2>Contacts</h2>
+          <div id="contacts-list">
+               <table>
+                    <center>
+                         <tr>
+                              <th>Name</th>
+                              <th>Mobile No.</th>
+                              <th>Email</th>
+                              <th>Reason</th>
+                         </tr>
+                         {{{body}}}
+                    </center>
+               </table>
+          </div>
+     </div>
+     
+</section>
+</body>
+</html>
