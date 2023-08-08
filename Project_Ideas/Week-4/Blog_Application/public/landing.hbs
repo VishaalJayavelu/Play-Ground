@@ -1,0 +1,24 @@
+<center>
+<button onclick="window.location.href='/'">Home</button>
+<button onclick="window.location.href='/SignIn'">Sign In</button>
+<button onclick="window.location.href='/SignUp'">Sign Up</button>
+</center>
+<center>
+<h2 class="error">{{messages}}</h2>
+</center>
+<center>
+<form method="post">
+<label for="FirstName">First Name:</label>
+<input type="text" name="FirstName" value="{{FirstName}}"><br><br>
+<label for="LastName">Last Name:</label>
+<input type="text" name="LastName"value="{{LastName}}"><br><br>
+<label for="Usernames">Username:</label>
+<input type="text" name="Usernames" value="{{Usernames}}"><br><br>
+<label for="Passwords">Password:</label>
+<input type="Password" name="Passwords" id="Passwords" value="{{Passwords}}"><br><br>
+<label for="ConfirmPasswords">Confirm Password:</label>
+<input type="Password" name="ConfirmPasswords" id="ConfirmPasswords" value="{{ConfirmPasswords}}"><br><br>
+<input name="ShowPassword" type="checkbox" onclick="ShowPassword()">ShowPassword<br><br>
+<button type="submit">Submit</button>
+</form>
+</center>

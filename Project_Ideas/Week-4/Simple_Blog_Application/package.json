@@ -1,0 +1,20 @@
+{
+  "name": "simple_blog_application",
+  "version": "1.0.0",
+  "description": "A Simple Blog Application",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "author": "Vishaal.J <vishaal.trs.j@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2",
+    "hbs": "^4.2.0"
+  }
+}

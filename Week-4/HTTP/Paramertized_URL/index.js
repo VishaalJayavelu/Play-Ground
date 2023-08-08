@@ -29,7 +29,7 @@ server.on('request', (req, res)=> {
           if(item.length===3){
                const index = Number(item[2]);
                res.write(JSON.stringify(list[index]));
-          }else  {
+          }else {
                res.write(JSON.stringify(list));           
           }
           res.end();

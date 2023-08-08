@@ -1,0 +1,30 @@
+<center>
+     <button type="button" onclick="window.location.href = '/AllBlogs'">All Blogs</button>
+     <button type="button" onclick="window.location.href = '/NewBlog'">New Blog</button>
+     <button type="button" onclick="window.location.href = '/MyBlogs/0'">My Blogs</button>
+     <button type="button" onclick="window.location.href = '/MyBin'">My Bin</button>
+     <form class="search" action="/Blog" method="post">
+          <input type="search" name="name" id="inputSearch">
+     </form>
+</center>
+<center>
+     <form class="form" method="post" action="/NewBlog">
+          <h1>New Blog</h1>
+          <div class="msg">{{message}}</div>
+          <legend>
+               <label for="title">Blog Name:</label>
+               <input type="text" name="title" id="inputtitle" value="{{name}}">
+               <br><br>
+               <label for="content">Blog content:</label>
+               <br><br>
+               <textarea type="text" name="content" id="inputcontent" row="100" cols="50" wrap="hard">{{content}}</textarea>
+               <br><br>
+               <label for="aurthor">Blog Aurthor:</label>
+               <input type="text" name="aurthor" id="inputaurthor" value="{{aurthor}}">
+               <br><br>
+               <center>
+                    <button type="submit" id="submit">Add Blog</button>
+               </center>
+          </legend>
+     </form>
+</center>
