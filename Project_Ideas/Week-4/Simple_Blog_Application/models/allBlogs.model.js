@@ -6,8 +6,7 @@ title:'bb',
 blog:'bbhj',
 aurthor: 'y',
 date: 'Fri, Aug 4, 2023, 4:58:26 PM',
-delete : true,
-deletedate : 'Fri, Aug 4, 2023, 4:58:27 PM',
+delete : false,
 },
 
 {
