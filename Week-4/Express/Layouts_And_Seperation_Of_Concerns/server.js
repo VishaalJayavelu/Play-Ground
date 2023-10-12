@@ -11,11 +11,6 @@ app.set('views', path.join(__dirname, 'views'));
 
 const PORT =5050;
 
-console.log(`http://localhost:${PORT}`);
-console.log(`http://localhost:${PORT}/lists`);
-console.log(`http://localhost:${PORT}/messages`);
-console.log(`http://localhost:${PORT}/site`);
-
 app.use((req,res,next)=>{
      const start = Date.now();
      next();
@@ -39,5 +34,6 @@ app.use('/',(req, res)=>{
 });
 app.listen(PORT,()=>{
      console.log('listening on port : '+PORT);
+     console.log(`http://localhost:${PORT}`);
 });
 
