@@ -1,4 +1,3 @@
-import { useEffect, useRef, useState } from 'react'
 import Img1 from '../../assets/img1.jpg'
 import Img2 from '../../assets/img2.jpg'
 import Img3 from '../../assets/img3.jpg'
@@ -6,6 +5,8 @@ import Img4 from '../../assets/img4.jpg'
 import Img5 from '../../assets/img5.jpg'
 import Img6 from '../../assets/img6.jpg'
 import tutorialsdev from '../../assets/tutorialsdev.png'
+
+import { useEffect, useRef, useState } from 'react'
 import Input from '../../components/Input'
 import { io } from 'socket.io-client'
 import { useNavigate } from 'react-router-dom'
@@ -22,6 +23,10 @@ const Dashboard = () => {
 	const [socket, setSocket] = useState(null)
 	const messageRef = useRef(null)
 
+     const oldMessages = messages
+     console.log(oldMessages)
+     console.log(Object.keys(oldMessages).length)
+
 	useEffect(() => {
 		setSocket(io('http://localhost:8080'))
 	}, [])
@@ -32,10 +37,11 @@ const Dashboard = () => {
 			console.log('activeUsers :>> ', users);
 		})
 		socket?.on('getMessage', data => {
-			setMessages(prev => ({
-				...prev,
-				messages: [...prev.messages, { user: data.user, message: data.message }]
-			}))
+               setMessages({
+                    conversationId:oldMessages.conversationId,
+                    receiver:oldMessages.receiver,
+                    messages: [...oldMessages.messages, { user: data.user, message: data.message }]
+               })
 		})
 	}, [socket])
 
@@ -76,6 +82,7 @@ const Dashboard = () => {
 	}, [])
 
 	const fetchMessages = async (conversationId, receiver) => {
+          console.log(receiver)
 		const res = await fetch(`http://localhost:8000/api/message/${conversationId}?senderId=${user?.id}&&receiverId=${receiver?.receiverId}`, {
 			method: 'GET',
 			headers: {
@@ -175,7 +182,6 @@ const Dashboard = () => {
 						{
 							messages?.messages?.length > 0 ?
 								messages.messages.map(({ message, user: { id } = {} }) => {
-                                             console.log(message);
 									return (
 										<>
                                                        <div ref={messageRef} className={`max-w-[40%] rounded-b-xl p-4 mb-6 ${id === user?.id ? 'bg-primary text-white rounded-tl-xl ml-auto' : 'bg-secondary rounded-tr-xl'} `}>{message}</div>
